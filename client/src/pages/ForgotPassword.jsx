@@ -30,7 +30,7 @@ function ForgotPassword() {
 
   try {
     const response = await axios.post(
-      "http://localhost:5000/api/auth/forgot",
+      "https://nova-ai-txaw.onrender.com/api/auth/forgot",
       {
         email,
         newPassword,

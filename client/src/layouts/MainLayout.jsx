@@ -79,7 +79,7 @@ function MainLayout({theme,setTheme}) {
 
       try {
         await axios.delete(
-          `http://localhost:5000/api/auth/chat/${userId}`
+          `https://nova-ai-txaw.onrender.com/api/auth/chat/${userId}`
         );
 
         setHistory([]);
@@ -96,7 +96,7 @@ function MainLayout({theme,setTheme}) {
       try {
 
         await axios.delete(
-          `http://localhost:5000/api/auth/chat/delete/${chatId}`
+          `https://nova-ai-txaw.onrender.com/api/auth/chat/delete/${chatId}`
         );
 
         setHistory(prev =>
@@ -121,11 +121,11 @@ function MainLayout({theme,setTheme}) {
     try {
 
       await axios.patch(
-        `http://localhost:5000/api/auth/chat/pin/${chatId}`
+        `https://nova-ai-txaw.onrender.com/api/auth/chat/pin/${chatId}`
       );
 
       const res = await axios.get(
-        `http://localhost:5000/api/auth/chat/${userId}`
+        `https://nova-ai-txaw.onrender.com/api/auth/chat/${userId}`
       );
 
       setHistory(res.data.chats);
@@ -145,7 +145,7 @@ function MainLayout({theme,setTheme}) {
       try {
 
         await axios.put(
-          `http://localhost:5000/api/auth/chat/rename/${chatId}`,
+          `https://nova-ai-txaw.onrender.com/api/auth/chat/rename/${chatId}`,
           {
             title
           }
@@ -165,7 +165,7 @@ function MainLayout({theme,setTheme}) {
       const userId = localStorage.getItem("userId");
         try {
           const res = await axios.get(
-            `http://localhost:5000/api/auth/chat/${userId}`
+            `https://nova-ai-txaw.onrender.com/api/auth/chat/${userId}`
           );
 
           setHistory(res.data.chats);
@@ -186,7 +186,7 @@ function MainLayout({theme,setTheme}) {
 
       setStatus("Thinking...");
 
-      const res = await axios.post("http://localhost:5000/chat", {
+      const res = await axios.post("https://nova-ai-txaw.onrender.com/chat", {
         userId,
         message: text,
         newChat:isNewChat

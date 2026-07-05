@@ -22,7 +22,7 @@ function Settings({theme, setTheme}) {
     try {
 
       await axios.delete(
-        `http://localhost:5000/api/auth/chat/${userId}`
+        `https://nova-ai-txaw.onrender.com/api/auth/chat/${userId}`
       );
 
       alert("History Cleared");
