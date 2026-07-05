@@ -1,0 +1,164 @@
+.voice-btn{
+
+    position:relative;
+
+    margin-top:0px;
+    flex-shrink:0;
+    width: 56px;
+    height:56px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+    display:flex;
+    align-items:center;
+
+    justify-content:center;
+    overflow:hidden;
+
+    font-size:22px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    color:white;
+
+    background:linear-gradient(
+        135deg,
+        #8b5cf6,
+        #4f46e5,
+        #00d4ff
+    );
+
+    background-size:300% 300%;
+
+    animation:gradientMove 6s ease infinite;
+
+    transition:.35s;
+
+    box-shadow:
+        0 0 20px rgba(139,92,246,.5),
+        0 0 45px rgba(0,212,255,.35);
+}
+
+/* Moving Shine */
+
+.voice-btn::before{
+
+content:"";
+
+position:absolute;
+
+top:0;
+left:-100%;
+
+width:60%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.55),
+transparent
+);
+
+transform:skewX(-25deg);
+
+animation:shine 3s infinite;
+}
+
+/* Hover */
+
+.voice-btn:hover{
+
+transform:translateY(-4px) scale(1.04);
+
+box-shadow:
+0 0 25px rgba(139,92,246,.8),
+0 0 60px rgba(0,212,255,.6);
+
+}
+
+/* Click */
+
+.voice-btn:active{
+
+transform:scale(.96);
+
+}
+
+/* Animated Gradient */
+
+@keyframes gradientMove{
+
+0%{
+background-position:0%;
+}
+
+50%{
+background-position:100%;
+}
+
+100%{
+background-position:0%;
+}
+
+}
+
+/* Shine */
+
+@keyframes shine{
+
+0%{
+
+left:-120%;
+
+}
+
+100%{
+
+left:140%;
+
+}
+
+}
+
+/* ==========================================
+   LIGHT THEME - VOICE BUTTON
+==========================================*/
+
+body.light .voice-btn{
+
+background:linear-gradient(
+135deg,
+#7c3aed,
+#06b6d4);
+
+color:#fff;
+
+box-shadow:
+0 12px 28px rgba(124,58,237,.25),
+0 0 35px rgba(6,182,212,.18);
+
+}
+
+body.light .voice-btn:hover{
+
+transform:translateY(-4px) scale(1.05);
+
+box-shadow:
+0 18px 40px rgba(124,58,237,.35),
+0 0 50px rgba(6,182,212,.25);
+
+}
+
+body.light .voice-btn::before{
+
+background:linear-gradient(
+90deg,
+transparent,
+rgba(255,255,255,.75),
+transparent
+);
+
+}

@@ -1,0 +1,406 @@
+/* ==========================================
+   NOVA AI - SIGNUP PAGE
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+.signup-page{
+
+    min-height:100vh;
+    width:100%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    position:relative;
+    overflow:hidden;
+
+    background:
+    radial-gradient(circle at top,#13203b 0%,#090b13 55%,#050507 100%);
+}
+
+/* ==========================================
+   Animated Background
+========================================== */
+
+.signup-bg{
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,#6d4aff22 2px,transparent 2px);
+
+    background-size:55px 55px;
+
+    animation:bgMove 18s linear infinite;
+
+    opacity:.35;
+}
+
+@keyframes bgMove{
+
+    from{
+        transform:translateY(0);
+    }
+
+    to{
+        transform:translateY(-55px);
+    }
+
+}
+
+/* ==========================================
+   Orb
+========================================== */
+
+.signup-orb{
+
+    position:absolute;
+
+    top:85px;
+
+    width:180px;
+    height:180px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+}
+
+.signup-orb .ring{
+
+    position:absolute;
+
+    border-radius:50%;
+
+    border:2px solid rgba(0,212,255,.45);
+
+    animation:rotate 8s linear infinite;
+}
+
+.signup-orb .ring1{
+
+    width:180px;
+    height:180px;
+
+}
+
+.signup-orb .ring2{
+
+    width:120px;
+    height:120px;
+
+    animation-direction:reverse;
+
+}
+
+.signup-orb .core{
+
+    width:30px;
+    height:30px;
+
+    border-radius:50%;
+
+    background:#00d4ff;
+
+    box-shadow:
+    0 0 18px #00d4ff,
+    0 0 45px #00d4ff;
+
+}
+
+@keyframes rotate{
+
+    from{
+        transform:rotate(0deg);
+    }
+
+    to{
+        transform:rotate(360deg);
+    }
+
+}
+
+/* ==========================================
+   Glass Card
+========================================== */
+
+.signup-card{
+
+    width:430px;
+
+    padding:40px;
+
+    border-radius:28px;
+
+    backdrop-filter:blur(18px);
+
+    background:rgba(255,255,255,.05);
+
+    border:1px solid rgba(255,255,255,.10);
+
+    box-shadow:
+
+    0 0 35px rgba(0,212,255,.10),
+
+    0 25px 60px rgba(0,0,0,.45);
+
+    z-index:10;
+
+    margin-top:120px;
+
+}
+
+/* ==========================================
+   Title
+========================================== */
+
+.signup-card h1{
+
+    text-align:center;
+
+    color:white;
+
+    letter-spacing:3px;
+
+    font-size:34px;
+
+}
+
+.subtitle{
+
+    margin-top:10px;
+
+    text-align:center;
+
+    color:#9db5d4;
+
+    margin-bottom:30px;
+
+}
+
+/* ==========================================
+   Inputs
+========================================== */
+
+.signup-card input{
+
+    width:100%;
+
+    margin-bottom:18px;
+
+    padding:16px 18px;
+
+    border-radius:14px;
+
+    border:1px solid rgba(255,255,255,.10);
+
+    outline:none;
+
+    color:white;
+
+    background:rgba(255,255,255,.06);
+
+    transition:.35s;
+}
+
+.signup-card input::placeholder{
+
+    color:#98a5bd;
+}
+
+.signup-card input:focus{
+
+    border-color:#00d4ff;
+
+    box-shadow:
+    0 0 15px rgba(0,212,255,.25);
+}
+
+/* ==========================================
+   Password Box
+========================================== */
+
+.password-box{
+    position:relative;
+    margin-bottom:18px;
+}
+
+.password-box input{
+    margin-bottom:0;
+    padding-right:90px;
+}
+
+.eye-btn{
+
+    position:absolute;
+
+    top:50%;
+    right:12px;
+
+    transform:translateY(-50%);
+
+    border:none;
+    outline:none;
+
+    background:transparent;
+
+    color:#00d4ff;
+
+    font-size:14px;
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+}
+
+.eye-btn:hover{
+
+    color:#7ee8ff;
+}
+
+/* ==========================================
+   Error
+========================================== */
+
+.error-text{
+
+    color:#ff5f7a;
+
+    font-size:14px;
+
+    margin-bottom:15px;
+
+    text-align:center;
+}
+
+/* ==========================================
+   Signup Button
+========================================== */
+
+.signup-btn{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:15px;
+
+    cursor:pointer;
+
+    font-size:16px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    color:white;
+
+    background:
+    linear-gradient(135deg,#6d4aff,#00d4ff);
+
+    transition:.35s;
+
+    box-shadow:
+    0 0 20px rgba(109,74,255,.45),
+    0 0 35px rgba(0,212,255,.35);
+}
+
+.signup-btn:hover{
+
+    transform:translateY(-2px) scale(1.02);
+
+    box-shadow:
+    0 0 35px rgba(109,74,255,.6),
+    0 0 55px rgba(0,212,255,.5);
+}
+
+.signup-btn:active{
+
+    transform:scale(.98);
+}
+
+/* ==========================================
+   Login Link
+========================================== */
+
+.login-link{
+
+    margin-top:24px;
+
+    text-align:center;
+
+    color:#9db5d4;
+
+    font-size:14px;
+}
+
+.login-link span{
+
+    margin-left:6px;
+
+    color:#00d4ff;
+
+    cursor:pointer;
+
+    font-weight:bold;
+
+    transition:.3s;
+}
+
+.login-link span:hover{
+
+    color:white;
+
+    text-shadow:
+    0 0 10px #00d4ff;
+}
+
+/* ==========================================
+   Responsive
+========================================== */
+
+@media(max-width:520px){
+
+    .signup-card{
+
+        width:92%;
+
+        padding:28px;
+    }
+
+    .signup-card h1{
+
+        font-size:28px;
+    }
+
+    .signup-orb{
+
+        width:140px;
+        height:140px;
+
+        top:70px;
+    }
+
+    .signup-orb .ring1{
+
+        width:140px;
+        height:140px;
+    }
+
+    .signup-orb .ring2{
+
+        width:90px;
+        height:90px;
+    }
+}
