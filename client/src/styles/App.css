@@ -26,6 +26,7 @@ body{
 .container{
     width:100%;
     height:100vh;
+    height:100dvh;
     overflow: hidden;
     display:flex;
     flex-direction:column;
@@ -865,4 +866,46 @@ background:linear-gradient(
 #7c3aed,
 #06b6d4);
 
+}
+
+/* ==========================================
+   MOBILE RESPONSIVE (NEW - added for phones)
+========================================== */
+
+@media (max-width: 640px){
+
+    .container{
+        padding: 12px;
+    }
+
+    .circle{
+        width: 110px;
+        height: 110px;
+        margin-top: 10px;
+    }
+
+    .ring2{
+        width: 80px;
+        height: 80px;
+        top: 15px;
+        left: 15px;
+    }
+
+    .core{
+        width: 24px;
+        height: 24px;
+        top: 43px;
+        left: 43px;
+    }
+
+    .title{
+        font-size: 26px;
+        letter-spacing: 3px;
+        margin-top: 10px;
+    }
+
+    .status-text{
+        margin-top: 4px;
+        font-size: 13px;
+    }
 }
