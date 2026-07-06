@@ -81,15 +81,15 @@
 
 .chat-box.full{
     width: min(900px,95%);
-    height: calc(100vh - 120px);
-    height: calc(100dvh - 120px);
+    flex: 1;
+    min-height: 0;
 
-    margin: 20px auto;
-    margin-bottom:80px;
+    margin: 20px auto 0;
+    margin-bottom:100px;
     overflow-y: auto;
     overflow-x: hidden;
 
-    padding: 20px 20px 120px;
+    padding: 20px 20px 20px;
 
     justify-content: flex-start;
 

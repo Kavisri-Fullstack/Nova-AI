@@ -868,18 +868,3 @@ background:linear-gradient(
 
 }
 
-/* ==========================================
-   MOBILE RESPONSIVE (fixed - no size changes,
-   just allow scroll instead of clipping so
-   nothing hides behind screen edges)
-========================================== */
-
-@media (max-width: 640px){
-
-    .container{
-        overflow-y: auto;
-        height: auto;
-        min-height: 100vh;
-        min-height: 100dvh;
-    }
-}
