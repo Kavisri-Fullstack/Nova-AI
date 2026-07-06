@@ -869,43 +869,17 @@ background:linear-gradient(
 }
 
 /* ==========================================
-   MOBILE RESPONSIVE (NEW - added for phones)
+   MOBILE RESPONSIVE (fixed - no size changes,
+   just allow scroll instead of clipping so
+   nothing hides behind screen edges)
 ========================================== */
 
 @media (max-width: 640px){
 
     .container{
-        padding: 12px;
-    }
-
-    .circle{
-        width: 110px;
-        height: 110px;
-        margin-top: 10px;
-    }
-
-    .ring2{
-        width: 80px;
-        height: 80px;
-        top: 15px;
-        left: 15px;
-    }
-
-    .core{
-        width: 24px;
-        height: 24px;
-        top: 43px;
-        left: 43px;
-    }
-
-    .title{
-        font-size: 26px;
-        letter-spacing: 3px;
-        margin-top: 10px;
-    }
-
-    .status-text{
-        margin-top: 4px;
-        font-size: 13px;
+        overflow-y: auto;
+        height: auto;
+        min-height: 100vh;
+        min-height: 100dvh;
     }
 }
